@@ -5,6 +5,9 @@ import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBo
 
 import java.io.IOException;
 
+/**
+ * MediaStreamLoader: Stream Media from Object storage
+ */
 public interface MediaStreamLoader {
     ResponseEntity<StreamingResponseBody> loadEntireMediaFile(String fileName) throws IOException;
     ResponseEntity<StreamingResponseBody> loadPartialMediaFile(String fileName, String rangeValues) throws IOException;
